@@ -5,5 +5,5 @@ class ProductSupplier(Base):
     
     __tablename__ = "product_suppliers"
     
-    product_id = Column(Integer,ForeignKey("products.id"),nullable=False)
-    supplier_id = Column(Integer,ForeignKey("suppliers.id"),nullable=False)
+    product_id = Column(Integer,ForeignKey("products.id"),primary_key=True)
+    supplier_id = Column(Integer,ForeignKey("suppliers.id"),primary_key=True)
