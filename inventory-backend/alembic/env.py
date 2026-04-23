@@ -7,6 +7,11 @@ from alembic import context
 
 from app.core.config import Settings
 
+import os
+import sys
+
+sys.path.append(os.getcwd())
+
 config.set_main_option("sqlalchemy.url", settings.DATABASE_URL)
 
 # this is the Alembic Config object, which provides
